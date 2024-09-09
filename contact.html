@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LiveLikeLocals</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+    
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    background-color: #000000;
+    position: relative;
+    overflow-y: auto; /* Allows scrolling */
+    min-height: 100vh; /* Ensures the body covers at least the entire viewport */
+    padding-top: 40px;
+}
+
+body::before {
+    content: "";
+    background-image: url('bgg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(7px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    position: relative;
+    overflow-y: hidden; 
+    min-height: 100vh; 
+    position: relative;
+    z-index: 1;
+    padding-top:40px;
+}
+
+body::before {
+    content: ""; 
+    background-image: url('bgg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(7px); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  
+} */
+.other-content {
+    padding-bottom: 100px; /* Adjust this value to ensure there's enough space */
+}
+/* .contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; 
+    background-color: #ffffff;
+    border-radius: 8px; 
+    margin: 20px;  
+} */
+
+.contact-form {
+    flex: 1;
+    padding: 50px;
+    
+}
+
+.contact-form h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    border-radius: 4px; /* Added border radius for consistency */
+}
+
+.contact-form input[type="date"] {
+    width: 48%; /* Adjusted to fit better */
+}
+
+.contact-form textarea {
+    height: 80px;
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+.contact-form button {
+    width: 120px; /* Increased button width */
+    padding: 10px;
+    cursor: pointer;
+    background-color: white; /* Initial background color */
+    color: black; /* Initial text color */
+    border: 2px solid black; /* Border styling */
+    border-radius: 4px; /* Added border radius for consistency */
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.contact-form button:hover {
+    background-color: black;
+    color: white; /* Inverted text color on hover */
+}
+
+.contact-image {
+    flex: 1;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+     object-fit: cover; 
+}
+
+/* Navbar styles from main CSS */
+
+nav {
+    width: 100%;
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+  }
+  
+  nav .logo {
+    width: 150px;
+    margin: 2vh;
+    margin-left: 8%;
+  }
+  
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+  }
+  
+  .navbar {
+    display: flex;
+    margin-right: 4vh;
+  }
+  
+  .navbar a {
+    color: white;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: ease 0.40s;
+  }
+  
+  .navbar a:hover, .navbar a.active {
+    background: white;
+    color: black;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 5px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+  }
+  
+</style>
+<body class="contact-us">
+    <nav>
+        <img src="logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+        
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./try.html">Bookings</a>
+                <a href="./index.html#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./knowus.html">Know Us</a>
+                <a href="./locations.html">Blog</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+  
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+                <p>Let’s Connect! We’re here to help you immerse in local culture and make unforgettable memories.</p>
+                <form>
+                    <input type="email" placeholder="Enter a valid email address" required>
+                    <input type="text" placeholder="Enter your Name" required>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                    <input type="date" placeholder="mm/dd/yyyy">
+                    <textarea placeholder="Enter your message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="contact-image">
+                <img src="yay1.jpg" alt="Contact Us Image">
+            </div>
+        </div>
+
+
+       
+   
+</body>
+</html>
+
+  
